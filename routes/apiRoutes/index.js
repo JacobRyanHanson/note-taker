@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const { notes } = require("../../data/notes.json");
-const {assignId, createNewNote, deleteNote, findById} = require('../../lib/notes.js');
-const fs = require("fs");
-const path = require("path");
+const {assignId, createNewNote, deleteNote} = require('../../lib/notes.js');
 
 router.get("/notes", function (request, response) {
     let results = notes;
